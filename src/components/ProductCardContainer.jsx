@@ -1,13 +1,17 @@
 import ProductCard from "./ProductCard";
 
 export default function ProductCardContainer({ products }) {
-  const productsJsx = products.map((product) => (
-    <ProductCard product={product} />
+  const productsJsx = products.map((product, index) => (
+    <ProductCard key={index} product={product} />
   ));
   return (
     <>
-      <h1>Discover Your Favorite Products</h1>
+    <div>
+      <h1>Discover Your Favourite Products</h1>
       {productsJsx}
+    </div>
+           
     </>
   );
+  
 }
